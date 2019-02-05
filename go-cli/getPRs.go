@@ -21,20 +21,27 @@ func main() {
 	app.Name = "Github Pull Request Lookup CLI"
 	app.Usage = "Let's you look up for pull requests within your organizations"
 
+	myFlags := []cli.Flag{
+		cli.StringFlag{
+			Name:  "organization",
+			Value: "",
+			Usage: "Determines which organization will be checked for pull requests",
+		},
+	}
+
 	app.Commands = []cli.Command{
 		{
 			Name:  "get-pull-requests",
 			Usage: "Looks up the pull requests in your organizations",
+			Flags: myFlags,
 
 			Action: func(c *cli.Context) error {
 
 				fmt.Println(c.String("organization"))
 				userLogin, client := authenticateUser()
-				r := bufio.NewReader(os.Stdin)
-				fmt.Print("Enter an organization (leave blank for all): ")
-				requestedOrg, _ := r.ReadString('\n')
-				if len(requestedOrg) > 1 {
-					printRequestedOrgPR(userLogin, client, strings.TrimSpace(requestedOrg))
+
+				if len(c.String("organization")) > 1 {
+					printRequestedOrgPR(userLogin, client, strings.TrimSpace(c.String("organization")))
 				} else {
 					printAllOrgPR(userLogin, client)
 				}
