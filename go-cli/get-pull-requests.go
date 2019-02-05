@@ -31,7 +31,7 @@ func main() {
 
 	app.Commands = []cli.Command{
 		{
-			Name:  "get-pull-requests",
+			Name:  "pulls",
 			Usage: "Looks up the pull requests in your organizations",
 			Flags: myFlags,
 
