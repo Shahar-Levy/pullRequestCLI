@@ -1,5 +1,5 @@
 <h2>pullRequestCLI</h2>
-This is a CLI tool to list pull requests in your organizations. It will allow you to choose an organization you are interested in or look at all your organizations. The only command available is get-pull-requests. The --organization flag allows you to specify which organization you are interested in.
+This is a CLI tool to list pull requests in your organizations. It will allow you to choose an organization you are interested in or look at all your organizations. The only command available is pulls. The --organization flag allows you to specify which organization you are interested in.
 
 
 ```
@@ -13,7 +13,7 @@ VERSION:
    0.0.1
 
 COMMANDS:
-     get-pull-requests  Looks up the pull requests in your organizations
+     pulls              Looks up the pull requests in your organizations
      help, h            Shows a list of commands or help for one command
 
 GLOBAL OPTIONS:
