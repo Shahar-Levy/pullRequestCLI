@@ -1,4 +1,4 @@
-<h2>pullRequestCLI</h2>
+<h2>get-pull-requests</h2>
 This is a CLI tool to list pull requests in your organizations. It will allow you to choose an organization you are interested in or look at all your organizations. The only command available is pulls. The --organization flag allows you to specify which organization you are interested in.
 
 
@@ -7,7 +7,7 @@ NAME:
    Github Pull Request Lookup CLI - Let's you look up for pull requests within your organizations
 
 USAGE:
-   pullRequestCLI [global options] command [command options] [arguments...]
+   get-pull-requests [global options] command [command options] [arguments...]
 
 VERSION:
    0.0.1
