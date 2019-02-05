@@ -20,6 +20,8 @@ GLOBAL OPTIONS:
    --help, -h     show help
    --version, -v  print the version
    ```
-   
-   
-   
+<h3>Installation</h3>   
+Go to releases and download the binary. Open the terminal and chmod 755 the binary to make it executable. You can now use the script. For example, if you were to run it from your downloads, you would run:
+```/Users/$USER/Downloads/get-pull-requests pulls```
+or
+```/Users/$USER/Downloads/get-pull-requests pulls --organization dummyorganization123```
